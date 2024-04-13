@@ -6,7 +6,7 @@ module shift_test;
   wire [7:0] Y;
 
 
-  //Instantiate module from hw1q4.v
+  //Instantiate module from shifter.v
   comb_shifter uut(A, n, dir, Y);
 
   //Initialize variables
@@ -16,7 +16,7 @@ module shift_test;
 
 
   initial begin
-    $dumpfile("hw1q4.vcd"); $dumpvars(0, shift_test);
+    $dumpfile("shifter.vcd"); $dumpvars(0, shift_test);
     $display("Combinational Shifter: ");
 
     for (n = 4'b0000; n < 4'b1000; n = n + 4'b0001) begin   // n=0;n<8;n=n+1 also works
